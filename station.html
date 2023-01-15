@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Stations</title>
+<link href="css/template.css" rel="stylesheet" type="text/css">
+<style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+</head>
+
+<body>
+
+
+	<div id="wrapper">
+		
+		<div id="logo">
+		<div id="image">
+			<img src="images/Wil Logo.png" alt="" height="105" width="132" > <img src="images/sace.png" alt=""/> </div>	
+			
+			</div>
+					
+	<nav>
+		<a href="index.php">Home |</a>
+		<a href="parties.html">Parties |</a>
+		<a href="login.php">Login And Cast Your Vote |</a>
+		<a href="station.html">Station |</a>
+		<a href="contact-us.html">Contact Us |</a>
+		<a href="about-us.html">About Us |</a>
+		<a href="register.php">Rgister To Vote</a>			
+	</nav>
+		<div id="content">
+		
+		<br>
+								
+	<!-- The main content goes here -->	
+			
+		<br>
+			<!-- Map -->
+
+			<h3>Voting Stations</h3>
+    <div id="map"></div>
+    <script>
+    		function initMap() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 5,
+          center: {lat:-30.0545958, lng:25.2176415}
+        });
+
+        // Create an array of alphabetical characters used to label the markers.
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        // Add some markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "locations" array.
+        // The map() method here has nothing to do with the Google Maps API.
+        var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+          });
+        });
+        
+        
+
+        // Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+      }
+      var locations = [
+        {lat: -22.9230418, lng: 30.2103609},
+        {lat: -33.91928, lng: 18.42533},
+        {lat: -27.89438, lng: 27.85709},
+        {lat: -25.65831, lng: 28.20866},
+        {lat: -24.58404, lng: 30.49381},
+        {lat: -23.82248, lng: 31.06510},
+        {lat: -33.70327, lng: 25.57194},
+        {lat: -33.07952, lng: 27.85709},
+        {lat:-34.414272 , lng:19.248734},
+        {lat:-26.859823, lng:26.631750},
+        {lat: -37.759859, lng: 145.128708},
+        {lat: -37.765015, lng: 145.133858},
+        {lat: -37.770104, lng: 145.143299},
+        {lat: -37.773700, lng: 145.145187},
+        {lat: -37.774785, lng: 145.137978},
+        {lat: -37.819616, lng: 144.968119},
+        {lat: -38.330766, lng: 144.695692},
+        {lat: -39.927193, lng: 175.053218},
+        {lat:-26.703421 , lng: 27.807695},
+        {lat: -29.851847, lng: 30.993368},
+        {lat: -28.741943, lng: 24.771944},
+        {lat: -25.850187, lng:  28.198042},
+        {lat: -33.991360, lng: 25.656912}
+      ]
+      </script>
+    	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6ULqF4bZ3ZzAVM0X3QAW5K2nIoFan3k4&callback=initMap">
+    </script>
+			
+	<div id="bottom">
+		 			<div >
+		 				<h4>Like and Follow Us</h4>
+		 				<p>Facebook<img src="icons/1476208982_facebook.png" alt="" width="25" height="25"></p>
+		 				<p>Twitter<img src="icons/1476208871_twitter.png" width="25" height="25" alt=""></p>
+		 			</div>
+		 			
+		 			<div id="links">
+		 			<h4>Links To Check</h4>
+		 				<a href="http://www.departmentofhomeaffiar.gov">Home Affairs</a>
+		 			</div>
+		 			 <div id="footer">
+				      <p>&copy;2022 The South Africa Electoral Consignment - Developed by Meshack Mthimkhulu </p>
+	               </div>
+		 			</div>
+ 		
+	</div>
+	</div>
+
+</body>
+
+</html>

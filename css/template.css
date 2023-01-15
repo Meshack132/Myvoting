@@ -1,0 +1,154 @@
+﻿/* ------------------- Main containers ------------------- */ 
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: Tahoma,Verdana,Geneva,sans-serif;
+	background-repeat: repeat;
+}
+
+.party{
+  background-color:teal;width:500px;
+  float:left
+}
+
+#wrapper {
+	margin: 0px auto;
+	background-color:#FFFFFF;
+	width: 960px;
+}
+
+#slideShow{
+	width :920px;
+}
+#logo {
+	padding: 15px 20px 15px 20px;
+	background-color:white;
+	text-align:left;
+}
+#headergraphic {
+	height: 236px;
+}
+
+nav {
+	background-color:#669999;
+	color: #FFFFFF;
+	font-size: 14px;
+	padding: 10px;
+	text-align:center;
+}
+#content {
+	font-size: 14px;
+	overflow: auto;
+	padding: 0px 20px 20px 20px;
+}
+
+#links{
+
+	text-align:justify;
+	}
+/* ------------------- Navigation ------------------- */
+nav a {
+	text-decoration:none;
+	color: #FFFFFF;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:10px;
+	margin-right:10px;
+	
+}
+nav a:hover {
+	color: #0089af;
+}
+/* ------------------- Headings  ------------------- */
+h1,h2,h3{
+	color:blue;
+	font-weight: normal;
+	margin: 20px 0px 10px 0px;
+}
+h1{
+	font-size: 28px;
+}
+h2{
+	font-size: 22px;
+}
+h3{
+	font-size: 16px;
+}
+#party{
+	text-align:center;
+}
+/* ------------------- Text  ------------------- */
+p{ text-align:justify;}
+li{ list-style-type:circle;
+} 
+/* ------------------- Tables  ------------------- */
+#table{
+	border: solid 1px #D9BF8F;
+	border-collapse: collapse;
+	}
+td {
+	border: solid 1px #D9BF8F;
+	border-collapse:collapse;
+	vertical-align:top;
+	padding:5px;
+}
+td.currency{
+	text-align:right;
+}
+/* ------------------- party ------------------- */
+#party1 {
+padding-bottom:0px;
+
+	}
+#party1 img{ padding:0px;float:left;margin-right:10px;text-align:left; 
+	}
+	#party1 p{ 
+	font-size:10pt;text-align:left;
+}
+#contact img{
+	padding:50;
+	float:right;
+	
+}
+/* ------------------- Forms  ------------------- */
+label {
+	float: left;
+	margin: 1px 0px 0px 0px;
+	width: 100px;
+	display: block;
+}
+input, select, textarea  {
+border : solid 1px #D9BF8F;
+margin :Top 1px, rest 0;
+} 
+.error {color: #f00;}
+
+.error-highlight {border: 1px solid #f00;}
+.submit {
+}
+/* ------------------- Links  ------------------- */
+a:link{
+	color: #734636 ;
+	font-weight:bold;
+}
+a:visited{
+	color: #D9BF8F;
+}
+a:hover{
+	color: #0089af;
+}
+a:link,visited,hover{
+	color:#ffffff;
+	text-decoration:none;
+}
+
+#content a:link {
+	color:#734636;
+	font-weight:bold;
+}
+#content a:visited {
+	color:#D9BF8F;
+}
+#content a:hover {
+	color:#0089af;
+}
