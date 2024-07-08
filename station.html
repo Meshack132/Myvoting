@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stations</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #logo img {
+            height: 105px;
+            width: 132px;
+            vertical-align: middle;
+        }
+        #image img {
+            height: 30px;
+            width: auto;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        #content {
+            margin-bottom: 20px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #bottom {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+        #bottom h4 {
+            margin-bottom: 10px;
+        }
+        #bottom p {
+            margin: 5px 0;
+        }
+        #links a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        #footer {
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="logo">
+            <div id="image">
+                <img src="images/Wil Logo.png" alt=""> <img src="images/sace.png" alt="">
+            </div>
+        </div>
+        <nav>
+            <a href="index.php">Home |</a>
+            <a href="parties.html">Parties |</a>
+            <a href="login.php">Login And Cast Your Vote |</a>
+            <a href="station.html">Station |</a>
+            <a href="contact-us.html">Contact Us |</a>
+            <a href="about-us.html">About Us |</a>
+            <a href="register.php">Register To Vote</a>
+        </nav>
+        <div id="content">
+            <br>
+            <!-- Voting Stations Map -->
+            <h3>Voting Stations</h3>
+            <div id="map"></div>
+        </div>
+        <div id="bottom">
+            <div>
+                <h4>Like and Follow Us</h4>
+                <p>Facebook <img src="icons/1476208982_facebook.png" alt="" width="25" height="25"></p>
+                <p>Twitter <img src="icons/1476208871_twitter.png" width="25" height="25" alt=""></p>
+            </div>
+            <div id="links">
+                <h4>Links To Check</h4>
+                <a href="http://www.departmentofhomeaffiar.gov">Home Affairs</a>
+            </div>
+            <div id="footer">
+                <p>&copy;2022 The South Africa Electoral Consignment - Developed by Meshack Mthimkhulu</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Leaflet.js Library -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([-30.0545958, 25.2176415], 5);
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Array of voting station locations
+        var locations = [
+            [-22.9230418, 30.2103609],
+            [-33.91928, 18.42533],
+            [-27.89438, 27.85709],
+            [-25.65831, 28.20866],
+            [-24.58404, 30.49381],
+            [-23.82248, 31.06510],
+            [-33.70327, 25.57194],
+            [-33.07952, 27.85709],
+            [-34.414272 , 19.248734],
+            [-26.859823, 26.631750],
+            [-37.759859, 145.128708],
+            [-37.765015, 145.133858],
+            [-37.770104, 145.143299],
+            [-37.773700, 145.145187],
+            [-37.774785, 145.137978],
+            [-37.819616, 144.968119],
+            [-38.330766, 144.695692],
+            [-39.927193, 175.053218],
+            [-26.703421 , 27.807695],
+            [-29.851847, 30.993368],
+            [-28.741943, 24.771944],
+            [-25.850187,  28.198042],
+            [-33.991360, 25.656912]
+        ];
+
+        // Add markers to the map based on locations array
+        locations.forEach(function(loc) {
+            L.marker(loc).addTo(map);
+        });
+    </script>
+</body>
+</html>
